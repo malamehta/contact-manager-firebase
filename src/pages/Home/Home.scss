@@ -1,0 +1,56 @@
+@import '../../scss/base/_base-dir'; 
+@import '../../scss/helpers/_helpers-dir';
+
+.main{
+    display: flex;
+    position: absolute;
+    top: 95px;
+    @media screen and (max-width:$small-devices-max){
+        display: block;
+        width: 100%;  
+    }
+    .card-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        @media screen and (max-width:$small-devices-max){
+            justify-content: center;
+            margin-top: 30px;
+        }
+    }
+}
+.toggle-btn{
+    position: absolute;
+    right: 40px;
+     top: -31px;
+     background-color: $light-gray;
+     padding: 5px;
+     cursor: pointer;
+     border: none;
+    @media screen and (max-width:$medium-devices-max){
+        display: none;
+    }
+     i{
+        margin: 0 5px;
+        font-size: 16px;
+        &:hover{
+            background-color: aliceblue;
+            color:$blue-color;
+        }
+     }
+     
+}
+.btn2{
+    right: 65px;
+    @media screen and (max-width:$medium-devices-max){
+        display: none;
+    }
+}
+.arrow{
+    position: fixed;
+    top: 95px;
+    right: 100px;
+    @media screen and (max-width:$small-devices-max){
+        right: 10px;
+    }
+}

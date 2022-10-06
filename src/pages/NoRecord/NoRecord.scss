@@ -1,0 +1,22 @@
+@import '../../scss/helpers/_helpers-dir';
+.norecord-section{
+    width: 50vw;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+        width: 250px;
+    }
+    .back-btn{
+        margin-left: 40px;
+        background-color:$light-blue-color;
+        padding: 15px;
+        border-radius: 50px;
+        color: $blue-color;
+        font-size: 12px;
+        font-weight: 600;
+    }
+   
+}

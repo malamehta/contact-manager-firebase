@@ -1,0 +1,58 @@
+@import '../../scss/helpers/_helpers-dir';
+.view-section{
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (max-width:$medium-devices-max){
+        width: 55vw;
+        margin-top: 30px;
+    }
+    @media screen and (max-width:$small-devices-max){
+        width: 100%;
+        margin-top: 30px;
+    }
+    .basic-details{
+        border-bottom: $border;
+        padding-bottom: 1rem;
+        margin-bottom: 30px;
+        text-align: center;
+        .name{
+            font-size: 38px;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+        .companyDesignation{
+            font-size: 28px;
+            text-transform: capitalize;
+        }
+        .notes{
+            font-size: 14px;
+        }
+    }
+    .contact-details{
+        width: 600px;
+        text-align: left;
+        border: $border;
+        padding: 10px 30px 20px 30px;
+        border-radius: $border-radius;
+        @media screen and (max-width:$medium-devices-max){
+            width: 90%;
+            text-align: center;
+        }
+        .heading{
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        p{
+            margin-bottom: 10px;
+            i{
+                font-size: 14px;
+                margin-right: 10px;
+            }
+        }
+        
+    }
+}

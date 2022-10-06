@@ -1,0 +1,92 @@
+@import '../../scss/helpers/_helpers-dir';
+.container-left{
+    width: 300px;
+    display: block;
+    @media screen and (max-width:$medium-devices-max){
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        i{
+            background-color: $blue-color;
+            height: 44px;
+            width: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $white-color;
+            border-radius: $border-radius-50;
+            font-size: 24px;
+            margin-right: 5px;
+            margin-left: 10px;
+        }:first-child{
+            background:none;
+            color:$black-color;
+        }
+        &-text{
+            font-size: 22px;
+            color: $gray-color;
+            
+        }
+    }
+    .create-contact{
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 25px; 
+        border-radius: 50px;
+        border: none;
+        box-shadow:0 1px 2px 0 rgb(60 64 67 / 30%),0 1px 3px 1px rgb(60 64 67 / 15%);;
+        width: 200px;
+        margin:0 10px 30px 10px;
+        cursor: pointer;
+        @media screen and (max-width:991px){
+            margin: 0 10px 30px 30px;
+        }
+        .plus-icon{
+            font-size:34px;
+            font-weight: 300;
+            margin-right: 10px;
+        }
+        &__text{
+            font-size:14px;
+            color:#3c4043 ;
+            margin-left: 15px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        &:hover{
+            // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            transition: .2s linear;
+        }
+    }
+    .contacts-tab{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background-color:$light-blue-color;
+        padding: 10px 20px;
+        color: $blue-color;
+        &__text{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: capitalize;
+            i{
+                margin-right: 15px;
+            }
+        }
+    }
+}
+.menu-toggle{
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    z-index: 1000;
+}

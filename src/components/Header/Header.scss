@@ -1,0 +1,186 @@
+@import '../../scss/helpers/_helpers-dir';
+@import '../../scss/base/_base-dir';
+
+.header-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    @media screen and (max-width:$small-devices-max) {
+        justify-content: space-between;
+        padding: .6rem;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        width: 300px;
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                background-color: $blue-color;
+                height: 44px;
+                width: 44px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $white-color;
+                border-radius: 50%;
+                font-size: 24px;
+                margin-right: 10px;
+            }
+        }
+
+        :first-child {
+            background: none;
+            color: $black-color;
+            margin-left: 10px;
+            cursor: pointer;
+
+        }
+
+        &-text {
+            font-size: 22px;
+            color: $gray-color;
+        }
+    }
+
+    .search-icon__btn {
+        display: none;
+
+        @media screen and (max-width:$small-devices-max) {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    .search-bar {
+        background-color: #f1f3f4;
+        height: 46px;
+        width: 35rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        border-radius: $border-radius;
+        position: relative;
+
+        @media screen and (max-width:$medium-devices-max) {
+            width: 27rem;
+        }
+
+        @media screen and (max-width:$small-devices-max) {
+            display: none;
+        }
+
+        &__input {
+            width: 20rem;
+            background: transparent;
+            border: none;
+            outline: none;
+            margin-left: 20px;
+
+            &::placeholder {
+                font-size: 16px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .search-icon {
+            cursor: pointer;
+        }
+    }
+
+    .search-bar:focus-within {
+        background-color: $white-color;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        transition: .2s linear;
+
+        .close-btn {
+            color: $black-color;
+            display: block;
+        }
+    }
+}
+
+.search-bar__slider {
+    background-color: #f1f3f4;
+    display: flex;
+    align-items: center;
+    border-radius: $border-radius;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    background-color: $white-color;
+    height: 40px;
+    padding: 15px;
+
+    input {
+        width: 10rem;
+        border: none;
+        outline: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .close-btn {
+        display: none;
+    }
+
+    &:focus-within {
+        .close-btn {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (min-width:$small-devices-max) {
+        display: none;
+    }
+}
+
+@media screen and (max-width:$small-devices-max) {
+    .slide-search {
+        background-color: $light-blue-color;
+        width: 100%;
+        height: 100px;
+        position: fixed;
+        left: 0px;
+        transition: left .5s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1001;
+    }
+
+    .slide-search2 {
+        background-color: $light-blue-color;
+        width: 100%;
+        height: 100px;
+        position: fixed;
+        left: 750px;
+        transition: left .5s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1001;
+    }
+}

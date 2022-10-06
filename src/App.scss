@@ -1,0 +1,11 @@
+.main{
+    display: flex;
+    @media screen and (max-width:768px){
+        display: block;
+    }
+    .right{
+        position: relative;
+        margin-left: 28px;
+        margin-top: 30px;
+    }
+}
